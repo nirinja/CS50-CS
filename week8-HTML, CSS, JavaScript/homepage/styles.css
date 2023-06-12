@@ -1,0 +1,65 @@
+.marginSide {
+    margin: 0px 10px;
+}
+
+.black {
+    background : black;
+    color: white;
+    margin: 50px,0;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+.center{
+    text-align: center;
+    margin: 10px;
+}
+
+.class-1 {
+    background-color: #e8f0fe;
+    color: #1f4068;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+.class-2 {
+    background-color: #f9d5e5;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+.class-3 {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+.class-4 {
+    background-color: #ffe5b4;
+    color: #8b4513;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+.class-5 {
+    background-color: #e6e6e6;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+  }

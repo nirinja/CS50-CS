@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<form action="addEvent" method="post">
+    <div class="row">
+        <div class="col"><input class="form-control mx-auto w-auto" id="ime" name="ime" placeholder="Ime" type="text"></div>
+        <div class="col"><input class="form-control mx-auto w-auto" id="opis" name="opis" placeholder="Opis" type="text"></div>
+        <div class="col"><input class="form-control mx-auto w-auto" id="datum" name="datum" placeholder="Datum" type="date"></div>
+        <div class="col"><input class="form-control mx-auto w-auto" id="ura" name="ura" placeholder="Ura" type="time"></div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col"><input class="form-control mx-auto w-auto" id="pogoj" name="pogoj" placeholder="Pogoj" type="text"></div>
+        <div class="col"><input class="form-control mx-auto w-auto" id="nagrada" name="nagrada" placeholder="Nagrada" type="text"></div>
+        <div class="col"><input class="form-control mx-auto w-auto" id="ogranizator" name="ogranizator" placeholder="Ogranizator" type="text"></div>
+        <div class="col"><input class="form-control mx-auto w-auto" id="lokacija" name="lokacija" placeholder="Lokacija" type="text"></div>
+      </div>
+      <br/>
+    <button class="btn btn-primary" type="submit">Add new event</button>
+</form>
+<br/><br/>
+<table class="table table-striped">
+  <tbody>
+      {% for x in events %}
+      <tr>
+          <td>{{ x[1] }}</td>
+          <td>{{ x[2] }}</td>
+          <td>{{ x[3] }}</td>
+          <td>{{ x[4] }}</td>
+          <td>{{ x[5] }}</td>
+          <td>{{ x[6] }}</td>
+          <td>{{ x[7] }}</td>
+          <td>{{ x[8] }}</td>
+          <td>
+              <form action="deleteEvent" method="post">
+                  <input type="hidden" name="id" value="{{ x[0] }}">
+                  <button class="btn btn-primary" type="submit">Delete</button>
+              </form>
+          </td>
+      </tr>
+      {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

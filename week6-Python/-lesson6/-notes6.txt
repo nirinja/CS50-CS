@@ -1,0 +1,7 @@
+Python favors counter += 1 to increment by one, losing the ability found in C to type counter++.
+
+While one could utilize a main function, it is not required.
+
+kako zagnat program:
+make hello1
+python hello1.py

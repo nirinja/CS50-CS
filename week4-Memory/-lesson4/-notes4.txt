@@ -1,0 +1,31 @@
+In C, the "&" symbol has two distinct uses:
+
+Address-of operator: The "&" symbol is used as the "address-of" operator.
+It is placed before a variable name to obtain the memory address where the variable is stored.
+For example, if we have a variable "x", the expression "&x" gives us the memory address where the value of "x" is stored.
+
+Example:
+
+int x = 10;
+int* ptr = &x;  // Assign the memory address of x to ptr
+Bitwise AND operator: The "&" symbol is also used as the bitwise AND operator.
+It performs the bitwise AND operation on two integer operands.
+The result of this operation is an integer where each bit is set to 1 only if both corresponding bits in the operands are also 1.
+Otherwise, the result bit is set to 0.
+
+Example:
+
+int a = 5;   // Binary representation: 0101
+int b = 3;   // Binary representation: 0011
+int c = a & b;// Bitwise AND of a and b, c = 0001 (1 in decimal)
+
+malloc allows you, the programmer, to allocate a block of a specific size of memory -    // Allocate memory for another string -char *t = malloc(strlen(s) + 1);
+
+free allows you to tell the compiler to free up that block of memory you previously allocated.     // Free memory- free(t);
+
+valgrind ./license plates.txt
+
+ debug50 ./filter -r images/yard.bmp out.bmp
+ make filter
+./filter -b images/yard.bmp out.bmp
+check50 cs50/problems/2023/x/filter/more

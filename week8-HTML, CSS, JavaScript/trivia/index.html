@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+            rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function checkA() {
+                document.getElementById("q1a").style.backgroundColor  = "green";
+                document.getElementById("a1").innerHTML = "Correct";
+                document.getElementById("a1").style.color = "green";
+                setTimeout(function() {
+                    document.getElementById("q1a").style.backgroundColor = "white";
+                }, 1000);
+            }
+            function checkB() {
+                document.getElementById("q1b").style.backgroundColor  = "red";
+                document.getElementById("a1").innerHTML = "Incorrect";
+                document.getElementById("a1").style.color = "red";
+                setTimeout(function() {
+                    document.getElementById("q1b").style.backgroundColor = "white";
+                }, 1000);
+            }
+            function checkC() {
+                document.getElementById("q1c").style.backgroundColor  = "red";
+                document.getElementById("a1").innerHTML = "Incorrect";
+                document.getElementById("a1").style.color = "red";
+                setTimeout(function() {
+                    document.getElementById("q1c").style.backgroundColor = "white";
+                }, 1000);
+            }
+            function checkD() {
+                document.getElementById("q1d").style.backgroundColor  = "red";
+                document.getElementById("a1").innerHTML = "Incorrect";
+                document.getElementById("a1").style.color = "red";
+                setTimeout(function() {
+                    document.getElementById("q1d").style.backgroundColor = "white";
+                }, 1000);
+            }
+
+            function validateForm() {
+                let x = document.getElementById("q2").value;
+                x = x.toUpperCase();
+                if (x == "BLACK") {
+                    document.getElementById("a2").innerHTML = "Correct";
+                    document.getElementById("a2").style.color = "green";
+                }
+                else
+                {
+                    document.getElementById("a2").innerHTML = "Incorrect";
+                    document.getElementById("a2").style.color = "red";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple choies</h2>
+                <hr>
+                <h3>Slugs have how many noses.</h3>
+                <button type="button" class="btn btn-outline-primary"
+                    id="q1a" class="q1" onclick="checkA()">4</button>
+                <button type="button" class="btn btn-outline-primary"
+                    id="q1b" class="q1" onclick="checkB()">3</button>
+                <button type="button" class="btn btn-outline-primary"
+                    id="q1c" class="q1" onclick="checkC()">2</button>
+                <button type="button" class="btn btn-outline-primary"
+                    id="q1d" class="q1" onclick="checkD()">1</button>
+                <p id="a1"> You chose...</p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is polar bear's skin?</h3>
+                <input id="q2">
+                <button type="button" class="btn btn-outline-primary"
+                    onclick="validateForm()">Submit</button>
+                <p id="a2"> Answer is...</p>
+            </div>
+        </div>
+    </body>
+</html

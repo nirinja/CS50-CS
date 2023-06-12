@@ -1,0 +1,84 @@
+from flask import Flask, g
+import sqlite3
+
+app = Flask(__name__)
+DATABASE = 'database.db'
+
+def get_db():
+    db = getattr(g, '_database', None)
+    if db is None:
+        db = g._database = sqlite3.connect(DATABASE)
+    return db
+
+@app.teardown_appcontext
+def close_connection(exception):
+    db = getattr(g, '_database', None)
+    if db is not None:
+        db.close()
+
+@app.route('/')
+def index():
+    conn = get_db()
+    cursor = conn.cursor()
+
+    # Create the 'events' table if it doesn't exist
+    cursor.execute('''CREATE TABLE IF NOT EXISTS events
+                      (id INT PRIMARY KEY NOT NULL,
+                        ime TEXT NOT NULL,
+                        datum TIMESTAMP NOT NULL,
+                        ura TIMESTAMP NOT NULL,
+                        opis TEXT NOT NULL,
+                        pogoj TEXT NOT NULL,
+                        nagrada TEXT NOT NULL,
+                        ogranizator TEXT NOT NULL,
+                        lokacija TEXT NOT NULL)''')
+
+    cursor.execute("SELECT * FROM events")
+    data = cursor.fetchall()
+    return render_template("index.html", events = data )
+
+if __name__ == '__main__':
+    app.run()
+
+
+    # for row in rows:
+    #     ime = row["ime"]
+    #     datum = row["datum"]
+    #     ura = row["ura"]
+    #     opis = row["opis"]
+    #     pogoj = row["pogoj"]
+    #     nagrada = row["nagrada"]
+    #     ogranizator = row["ogranizator"]
+    #     lokacija = row["lokacija"]
+
+        # Add stock information to portfolio list
+        # events.append({
+        #     "ime": ime,
+        #     "datum": datum,
+        #     "ura": ura,
+        #     "opis": opis,
+        #     "pogoj": pogoj,
+        #     "nagrada": nagrada,
+        #     "ogranizator": ogranizator,
+        #     "lokacija": lokacija,
+        # })
+
+# @app.route("/login", methods=["GET", "POST"])
+# def login():
+#     # Forget any user_id
+#     session.clear()
+#     if request.method == "POST":
+#         passwordget = request.form.get("day")
+#         now = datetime.datetime.now()
+#         password = now.strftime("%d%m%H%M")
+#         if passwordget == password:
+#             return redirect("/editevent")
+#         else:
+#             return render_template("index.html")
+
+# @app.route("/editevent", methods=["GET", "POST"])
+# def editevent():
+#     if request.method == "POST":
+#         return render_template("editevent.html")
+#     else:
+#         return render_template("log.html")

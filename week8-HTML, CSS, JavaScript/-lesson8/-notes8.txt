@@ -1,0 +1,1 @@
+Run http-server in your terminal while in your lab8 directory to start a web server that serves your webpage.

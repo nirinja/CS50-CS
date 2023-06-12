@@ -1,0 +1,39 @@
+Data structures are an essential concept in computer science and programming.
+They refer to a way of organizing and storing data in a computer so that it can be accessed and manipulated efficiently. Here is everything you need to know about data structures:
+
+What are data structures?
+Data structures are a way of organizing and storing data in a computer so that it can be accessed and manipulated efficiently.
+
+Why are data structures important?
+Data structures are important because they allow programmers to efficiently store and manipulate large amounts of data.
+They also allow for faster search and retrieval of data, which is essential for many computer applications.
+
+What are some common data structures?
+Some common data structures include arrays, linked lists, stacks, queues, trees, and graphs.
+
+What is an array?
+An array is a collection of elements of the same data type. Elements in an array are accessed using an index value.
+
+What is a linked list?
+A linked list is a collection of elements called nodes, where each node contains data and a reference to the next node in the list.
+Linked lists are useful for dynamic memory allocation and can be used to implement other data structures.
+
+What is a stack?
+A stack is a data structure that operates on a last-in-first-out (LIFO) principle. Elements are added and removed from the top of the stack.
+
+What is a queue?
+A queue is a data structure that operates on a first-in-first-out (FIFO) principle. Elements are added to the back of the queue and removed from the front.
+
+What is a tree?
+A tree is a hierarchical data structure that consists of nodes connected by edges. Each node can have zero or more child nodes.
+
+What is a graph?
+A graph is a collection of nodes connected by edges. Unlike trees, graphs can have cycles and multiple edges between nodes.
+
+How do you choose which data structure to use?
+Choosing the right data structure depends on the problem you are trying to solve. Consider the type of data you are working with,
+the operations you need to perform, and the efficiency of the data structure. It is also important to consider the memory usage and any limitations of the programming language you are using.
+
+C comes with a very useful function called realloc that will reallocate the memory for you.
+realloc takes two arguments. First, it asks you to specify the array you are attempting to copy.
+Second, it asks you to specify the size to which you would like the final array to be.

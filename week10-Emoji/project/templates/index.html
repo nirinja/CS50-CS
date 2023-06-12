@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<!------events------------->
+<section id="event">
+    <div class="container">
+      <h1>Dogotki</h1>
+      <hr/>
+          {% for x in events %}
+          <div class=".col-6">
+                        <!-- ime -->
+            <h1 class="display-6">{{ x[1] }}</h1>
+            <!-- datum ura lokacija -->
+            <label for="formGroupExampleInput" class="form-label">{{ x[2] }} ob {{ x[3] }}, se dobimo {{ x[8] }}</label>
+            <p class="lead">
+              {{ x[4] }}
+            </p>
+            <p class="lead">
+              pogoj: {{ x[5] }} <br/>
+              nagrada : <td>{{ x[6] }}</td>
+            </p>
+          </div>
+          <br/>
+          {% endfor %}
+    </div>
+  </section>
+  <!-- ----------ure------------- -->
+<section id="ure">
+  <div class="container">
+      <h1> Uradne ure</h1>
+    <hr/>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">dan</th>
+          <th scope="col">ura</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ponedeljek - sobota</td>
+          <td>6.00 - 00.00</td>
+        </tr>
+        <tr>
+          <td>nedelja, prazniki</td>
+          <td>8.00 - 2.00</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</section>
+<!------cenik------------>
+<section id="cenik">
+  <div class="container">
+      <h1>Cenik</h1>
+      <hr/>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">karta</th>
+            <th scope="col">cena [€]</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>dnevna</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>tedenska</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>mesečna</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>6-mesečna</td>
+            <td>150</td>
+          </tr>
+          <tr>
+            <td>letna</td>
+            <td>250</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</section>
+<br/>
+{% endblock %}
+

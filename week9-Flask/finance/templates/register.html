@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="confirmation" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+        <p>
+            <input type="checkbox" onclick="showPassword()">Show password <br/>
+            Password must include at least 5 characters.
+        </p>
+    </form>
+    <script>
+        function showPassword() {
+            var x = document.getElementById("password");
+            var y = document.getElementById("confirmation");
+            if (x.type === "password") {
+                x.type = "text";
+                y.type === "text";
+            } else {
+                x.type = "password";
+                y.type === "password";
+            }
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Theere is a big time difference between upper bound and lower bound.
+
+sort2 uses: Merge Sort
+
+How do you know?: Algorithm is fast and the time difference between sorting sorted numbers and random numbers is not significant.
+
+sort3 uses: Selection Sort
+
+How do you know?: Algorithm is semi-slow and the time difference between sorting sorted numbers and random numbers is not significant.

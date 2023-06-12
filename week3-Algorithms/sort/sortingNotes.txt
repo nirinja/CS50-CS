@@ -1,0 +1,42 @@
+//lab 3
+./[program_name] [text_file.txt]
+time ./[sort_file] [text_file.txt]
+
+sort1*
+    reversed5000.txt 0.099
+    reversed10000.txt 0m0.340s
+    reversed50000.txt 5.535s
+
+    sorted5000.txt
+    sorted10000.txt
+    sorted50000.txt 0.437
+
+    random5000.txt 0.108s
+    random10000.txt
+    random50000.txt 7.206
+
+sort2
+    reversed5000.txt
+    reversed10000.txt
+    reversed50000.txt 0.287
+
+    sorted5000.txt
+    sorted10000.txt
+    sorted50000.txt 0.313
+
+    random5000.txt
+    random10000.txt
+    random50000.txt 0.443
+
+sort3
+    reversed5000.txt
+    reversed10000.txt
+    reversed50000.txt 2.983
+
+    sorted5000.txt
+    sorted10000.txt
+    sorted50000.txt 3.095
+
+    random5000.txt
+    random10000.txt
+    random50000.txt 3.005

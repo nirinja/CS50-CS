@@ -1,0 +1,24 @@
+There are many algorithms for sorting arrays of numbers in C.
+In general, Merge Sort and Quick Sort are considered to be more efficient than Bubble, Selection, and Insertion Sort, especially for larger arrays.
+However, if the array is small, simple sorting algorithms such as Bubble, Selection, or Insertion Sort may be more efficient.
+The best algorithm depends on the specific requirements and constraints of your situation. Here are some commonly used sorting algorithms in C:
+
+1. Bubble Sort: It's a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.
+ It has a time complexity of O(n^2).
+
+2. Selection Sort: It sorts an array by repeatedly finding the minimum element from unsorted part and putting it at the beginning.
+ It has a time complexity of O(n^2).
+
+3.Insertion Sort: It builds the final sorted array one item at a time by inserting each item in its proper place in the sorted array.
+ It has a time complexity of O(n^2).
+
+4.Merge Sort: It's a divide and conquer algorithm that divides the array into halves, sorts them recursively, and then merges the sorted halves.
+ It has a time complexity of O(n log n).
+
+5. Quick Sort: It's also a divide and conquer algorithm that picks an element as pivot and partitions the array around the pivot.
+ It has a time complexity of O(n log n) in the average case, but can degrade to O(n^2) in the worst case.
+
+5. Heap Sort: It sorts the array by building a binary heap from the array and repeatedly extracting the maximum element from it. It has a time complexity of O(n log n).
+
+./[program_name] [text_file.txt]
+time ./[sort_file] [text_file.txt]
